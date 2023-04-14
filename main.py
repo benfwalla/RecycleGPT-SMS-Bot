@@ -42,7 +42,7 @@ def bot():
       db[user_num] = [{"role": "user", "content": incoming_dict['body']},
                       {"role": "assistant", "content": gpt_resp}]
     
-    print("Success! Message SID: " + message.sid + " \nResponse: \n" + gpt_resp)
+    print("Success!\n Message SID: " + message.sid + " \nResponse: \n" + gpt_resp)
     return message.sid
 
 
