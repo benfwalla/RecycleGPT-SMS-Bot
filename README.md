@@ -7,7 +7,8 @@ The bot is given context from the [the City and County of Denver's Recycling wik
 RecycleGPT is a proof-of-concept for a much greater ambition: building a GPT-powered bot that consumes all government websites and delivers clear and actionable information and course-of-action to the users. Government sites are notorious for having terrible UXs. A project like this will empower U.S. citizens the transparency of law that they ought to hve the right to have.
 
 ## Getting Started
-To use the text bot, text +1 (720) 806-5461. Scan this QR Code to open up a new text message:
+To use the text bot, text **+1 (720) 806-5461**. Scan this QR Code to open up a new text message:
+
 ![RecycleGPT SMS Number QR Code](static/bot-qr-code.png)
 
 ### Example Queries
