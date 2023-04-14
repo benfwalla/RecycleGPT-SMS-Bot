@@ -1,4 +1,4 @@
-# RecycleGPT ♻️
+# RecycleGPT ♻️🤖
 RecycleGPT is a GPT4-powered SMS text bot that aims to edcuate Denver⛰️ residents on what they can and can't recycle. 
 
 Have you have stood with an object in front of your trash and recycling bins thinking, "what the heck do I do with this?" I have! Sure, you can Google it, but different counties have different rules (i.e. you **can't** recycle crushed aluminum cans in Denver, but you can in my hometown of Pittsburgh). So, instead of navigating old, outdated government websites, I built this simple text bot! RecycleGPT will give you recycling (and eventually trash and composting advice) that is county-specific to you. Today, RecycleGPT only works with data from the City and County of Denver.
