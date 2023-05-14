@@ -2,7 +2,7 @@ import os
 from flask import Flask, request
 from replit import db
 from twilio.rest import Client
-from scripts.prompt_builder import answer_with_gpt_4
+from scripts.prompt_builder import answer_with_gpt
 
 app = Flask(__name__)
 
@@ -22,7 +22,7 @@ def bot():
   # Curate GPT's response
   client = Client(os.getenv("TWILIO_ACCOUNT_SID"), os.getenv("TWILIO_AUTH_TOKEN"))
   
-  gpt_resp = answer_with_gpt_4(incoming_dict['body'], "data/co_recycling_data_with_embeddings.csv", user_num, os.getenv("OPENAI_API_KEY"))
+  gpt_resp = answer_with_gpt(incoming_dict['body'], "data/co_recycling_data_with_embeddings.csv", user_num, os.getenv("OPENAI_API_KEY"))
 
   message = client.messages.create(
                               from_ = client_num,

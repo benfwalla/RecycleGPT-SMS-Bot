@@ -26,7 +26,7 @@ def search_recycling_wiki(query, df, openai_api_key, n=5, pprint=True):
       print()
   return results
 
-def answer_with_gpt_4(query, data, from_number, openai_api_key):
+def answer_with_gpt(query, data, from_number, openai_api_key):
   messages = [
     {"role" : "system", "content": "You are a very enthusiastic representative of Denver County who loves to teach people about recycling and composting! Your task is to answer questions from people over text. Given the following sections from the Denver City and County's Recycling page delimited by ```, answer the person's question using that information in a text-friendly way. You should always try to give a helpful answers that uses information from the text inside ```. But, if you are 100% unsure of the answer, say \"I'm sorry, I don't know how to help you with that.\" Use at most 30 words."}
   ]
@@ -60,4 +60,4 @@ def answer_with_gpt_4(query, data, from_number, openai_api_key):
 
   return response['choices'][0]['message']['content']
 
-#print(answer_with_gpt_4("Can I recycle dirty cardboard?", "data/co_recycling_data_with_embeddings.csv", '+14129797258', os.getenv("OPENAI_API_KEY")))
+#print(answer_with_gpt("Can I recycle dirty cardboard?", "data/co_recycling_data_with_embeddings.csv", '+14129797258', os.getenv("OPENAI_API_KEY")))
