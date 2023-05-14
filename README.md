@@ -23,3 +23,4 @@ The following is a list of idea I hope to include in RecycleGPT:
 * Add [Trash Wiki](https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Recycle-Compost-Trash/Trash)
 * Cite links in RecycleGPT's text messages
 * Work with AutoGPT🤖 to automicatically scrape from any county's recycling, compost, and trash data.
+* Explore HyDE for improved embedding retrieval performance

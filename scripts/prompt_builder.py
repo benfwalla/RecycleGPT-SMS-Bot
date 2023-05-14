@@ -28,7 +28,7 @@ def search_recycling_wiki(query, df, openai_api_key, n=5, pprint=True):
 
 def answer_with_gpt_4(query, data, from_number, openai_api_key):
   messages = [
-    {"role" : "system", "content": "You are a very enthusiastic representative of Denver County who loves to teach citizens about recycling! Given the following sections from the Denver City and County's Recycling page, answer the query using only that information in a friendly way. Always favor giving a helpful answer and use internet data, but favori the given Denver sections. If you are 100% unsure of the answer, say \"I'm sorry, I don't know how to help you with that.\""}
+    {"role" : "system", "content": "You are a very enthusiastic representative of Denver County who loves to teach people about recycling and composting! Your task is to answer questions from people over text. Given the following sections from the Denver City and County's Recycling page delimited by ```, answer the person's question using that information in a text-friendly way. You should always try to give a helpful answers that uses information from the text inside ```. But, if you are 100% unsure of the answer, say \"I'm sorry, I don't know how to help you with that.\" Use at most 30 words."}
   ]
 
   # Access prior chat from Replit DB, if it exists
@@ -39,19 +39,21 @@ def answer_with_gpt_4(query, data, from_number, openai_api_key):
 
   df = pd.read_csv(data)
   
-  context = "Context: "
+  context = "```"
   wiki_search_str = " ".join(search_recycling_wiki(query, df, openai_api_key, pprint=False)).replace("\n", " ")
   context += wiki_search_str
+  context += "```"
 
   context += " Query: {}".format(query)
   messages.append({"role" : "user", "content": context})
 
+  print(context)
+
   print("Awaiting OpenAI's response...")
   response = openai.ChatCompletion.create(
-    model = "gpt-4",
+    model = "gpt-3.5-turbo",
     messages = messages,
-    temperature = 0.7,
-    top_p = 1
+    temperature = 0
   )
 
   print("Total Tokens in this response: " + str(response['usage']['total_tokens']))
