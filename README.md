@@ -9,7 +9,7 @@ RecycleGPT is a proof-of-concept for a much greater ambition: building a GPT-pow
 ## Getting Started 👋
 To use the text bot, text **+1 (720) 806-5461**. Scan this QR Code to open up a new text message:
 
-![RecycleGPT SMS Number QR Code](static/bot-qr-code.png)
+![RecycleGPT SMS Number QR Code](static/bot-qr-code.jpeg)
 
 ### Example Queries 🤔
 ![SMS Text Example](static/text-example.png)
