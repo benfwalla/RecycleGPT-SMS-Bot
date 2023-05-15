@@ -13,6 +13,7 @@ To use the text bot, text **+1 (720) 806-5461**. Scan this QR Code to open up a 
 
 ### Example Queries 🤔
 ![SMS Text Example](static/sms-text-example.jpeg)
+
 Try sending the following messages and see how RecycleGPT replies:
 * "Can I recycle dirty cardboard?"
 * "Is it okay recycle a solo cup with Sharpie marker?"
